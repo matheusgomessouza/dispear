@@ -15,7 +15,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias / This project was de
 
 **💻 Projeto / Project**
 
-Dispear in my first music written in the Sonic Pi 🎶
+Dispear is my first music written in the Sonic Pi 🎶
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
