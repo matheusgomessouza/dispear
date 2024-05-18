@@ -34,9 +34,21 @@ live_loop :foo do
   sleep 8
 end
 
-##| live_loop :chor do
-##|   stop
-##|   sample :ambi_choir, amp: 0.3, attack: 0.6, attack_level: 5,
-##|     sustain: 3, sustain_level: 7, decay: 6, decay_level: 13, release: 10
-##|   sleep 2
-##| end
+live_loop :chor do
+  ##| stop
+  sample :ambi_choir, pan: -1, amp: 0.5, attack: 0.6, attack_level: 5,
+    sustain: 3, sustain_level: 7, decay: 6, decay_level: 13, release: 10
+  sleep 2
+  sample :ambi_choir, pan: 1, amp: 0.5, attack: 0.6, attack_level: 5,
+    sustain: 3, sustain_level: 7, decay: 6, decay_level: 13, release: 10
+  sleep 2
+end
+
+live_loop :vocal do
+  with_fx :echo do
+    ## Move this file to a new path in your computer and rename it in the line below 
+    folder = "./samples/op 8 2.wav"
+    sample folder, cutoff: rrand(50,95), attack: 2, sustain: 5, release: 3
+  end
+  sleep 4
+end
